@@ -1,24 +1,34 @@
-# README
+# Rails File Hosting with AWS S3
+Learn how to integrate AWS S3 with a rails application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisite
+Ruby 2.7.3
 
-Things you may want to cover:
+## Gem
+carrrierwave
+carrierwave-aws
+aws-sdk-rails
+figaro
 
-* Ruby version
+## How to Run
+Clone the project
 
-* System dependencies
+```bash
+  git clone https://github.com/nabilasiregar/rails-file-hosting
+```
 
-* Configuration
+Install dependencies
 
-* Database creation
+```bash
+  bundle install
+```
 
-* Database initialization
+Create a S3 Bucket in AWS
+In application.yml, define AWS Access Key ID, Secret Access Key, S3 Bucket Name, and AWS region
 
-* How to run the test suite
+Run the app
+```bash
+  rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Upload and delete .pdf|.docx file and check in your S3 bucket

@@ -4,30 +4,25 @@
   </div>
 <% end %>
 
-<br />
-
-<%= link_to "Add Report", new_report_path, class: "btn btn-primary" %>
-<br />
-<br />
-
-<table class = "table table-bordered table-striped">
-  <thead>.
-    <tr>
-        <th>Name</th>
-        <th>Download Link</th>
-        <th> </th>
-    </tr>
-  </thead>
-  
-  <tbody>
-    <% @reports.each do |report| %>
-        
+<div class="row">
+  <div class="col-md-8 col-md-offset-1">
+    <%= link_to "Add Report", new_report_path, class: "btn btn-link" %>
+    <table class = "table table-hover table-bordered">
+      <thead>
         <tr>
-          <td><%= report.file_name %></td>
-          <td><%= link_to "Download Report", report.attachment_url %></td>
-          <td><%= button_to "Delete",  report, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{report.file_name}?" %></td>
+          <th scope="col">Report Name</th>
+          <th scope="col">Download Link</th>
         </tr>
-        
-    <% end %>
-  </tbody> 
-</table>
+      </thead>
+      <tbody>
+        <% @reports.each do |report| %>       
+            <tr>
+              <td><%= report.file_name %></td>
+              <td><%= link_to "Download Report", report.attachment_url %></td>
+              <td><%= button_to "Delete",  report, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{report.file_name}?" %></td>
+            </tr>      
+        <% end %>
+      </tbody> 
+    </table>
+  </div>
+</div>

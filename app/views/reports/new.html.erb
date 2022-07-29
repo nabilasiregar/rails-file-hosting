@@ -1,21 +1,21 @@
 <% if !@report.errors.empty? %>
   <div class = "alert alert-error">
-    
     <ul>
         <% @report.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
     </ul>
-    
   </div>
 <% end %>
 
-<div class = "well">
-  <%= form_for @report, html: { multipart: true } do |f| %>
-    <%= f.label :file_name %>
-    <%= f.text_field :file_name %>
-    <%= f.label :attachment %>
-    <%= f.file_field :attachment %>
-    <%= f.submit "Save", class: "btn btn-primary" %>
-  <% end %>
+<div class="row" style="padding-top: 1em">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @report, html: { multipart: true, class: 'form-inline' } do |f| %>
+      <%= f.label :file_name, class: "form-group" %>
+      <%= f.text_field :file_name, class: "form-group" %>
+      <%= f.label :attachment, class: "form-group" %>
+      <%= f.file_field :attachment, class: "form-group" %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
