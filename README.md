@@ -4,11 +4,11 @@ Learn how to integrate AWS S3 with a rails application
 ## Prerequisite
 Ruby 2.7.3
 
-## Gem
-carrrierwave
-carrierwave-aws
-aws-sdk-rails
-figaro
+## Gem dependencies
+- carrrierwave
+- carrierwave-aws
+- aws-sdk-rails
+- figaro
 
 ## How to Run
 Clone the project
@@ -23,7 +23,7 @@ Install dependencies
   bundle install
 ```
 
-Create a S3 Bucket in AWS
+Create a S3 Bucket in AWS</br>
 In application.yml, define AWS Access Key ID, Secret Access Key, S3 Bucket Name, and AWS region
 
 Run the app
@@ -31,4 +31,4 @@ Run the app
   rails s
 ```
 
-Upload and delete .pdf|.docx file and check in your S3 bucket
+Upload and/or delete .pdf|.docx file and check in your S3 bucket
